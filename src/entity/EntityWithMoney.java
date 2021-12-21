@@ -24,4 +24,11 @@ public abstract class EntityWithMoney extends Entity {
         super(name);
     }
 
+    @Override
+    public boolean equals(Object anotherObject) {
+        if (!super.equals(anotherObject)) return false;
+        EntityWithMoney another = (EntityWithMoney) anotherObject;
+        return isPaidMoney == another.isPaidMoney && isReceivedMoney == another.isReceivedMoney;
+    }
+
 }

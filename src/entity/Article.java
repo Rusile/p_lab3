@@ -28,6 +28,13 @@ public class Article extends Entity {
 
     public void appeared() {
         isAppeared = true;
-        System.out.println(getName() + "появилась" + getPlace().getName());
+        System.out.println(getName() + " появилась" + getPlace().getName());
+    }
+
+    @Override
+    public boolean equals(Object anotherObject){
+        if (!super.equals(anotherObject)) return false;
+        Article another = (Article) anotherObject;
+        return isAppeared == another.isAppeared;
     }
 }

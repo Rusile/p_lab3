@@ -1,7 +1,8 @@
 package entity;
 
 import ect.Price;
-import place.Place;
+
+import java.util.Random;
 
 public class GadkinzArticle extends Article {
 
@@ -17,10 +18,9 @@ public class GadkinzArticle extends Article {
     }
 
     public void fixSituation() {
-        int chance = (int) (Math.random() * 1.99);
-        if (getIsAppeared()) {
-            Price newPrice = (chance == 0) ? Price.Low : Price.High;
-            Stocks.setPrice(newPrice);
+        int chance = new Random().nextInt(2);
+        if (getIsAppeared() && chance == 1) {
+            StocksOfBirge.setPrice(Price.High);
         }
     }
 }

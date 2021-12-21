@@ -1,28 +1,27 @@
-import place.*;
 import entity.*;
-import ect.*;
+import place.Place;
 
 public class Main {
     public static void main(String[] args) {
         Article article = new Article("Статейка", Place.Newspaper);
         Lords lords = new Lords("Владельцы гигантских акций");
-        Stocks stocks = new Stocks("Акции", Place.Barge);
+        StocksOfBirge stocksOfBirge = new StocksOfBirge("Акции", Place.Barge);
         Noone noone = new Noone("Никто ");
         RichCrew bogachi = new RichCrew("Трое богачей ");
         Gadkinz gadkinz = new Gadkinz("господин Гадкинз ");
         GadkinzArticle gadkinzArticle = new GadkinzArticle("Ряд статей");
 
         article.appeared();
-        stocks.checkCurrentPrice();
-        lords.sellOrSave(article, stocks);
-        stocks.checkCurrentPrice();
-        noone.dontWantorWant(stocks);
+        stocksOfBirge.checkCurrentPrice();
+        lords.sellOrSave(article, stocksOfBirge);
+        stocksOfBirge.checkCurrentPrice();
+        noone.dontWantorWant(stocksOfBirge);
         lords.checkMood();
         bogachi.pay(gadkinz);
         gadkinz.makeArticle(gadkinzArticle);
         gadkinzArticle.fixSituation();
 
-        stocks.checkCurrentPrice();
+        stocksOfBirge.checkCurrentPrice();
         lords.checkMood();
 
 

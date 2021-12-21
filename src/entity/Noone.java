@@ -1,7 +1,6 @@
 package entity;
 
 import ect.Price;
-import place.Place;
 
 public class Noone extends Entity {
 
@@ -12,10 +11,10 @@ public class Noone extends Entity {
 
     //никто
 
-    public void dontWantorWant(Stocks stocks) {
-        if (Stocks.getPrice() == Price.Low)
+    public void dontWantorWant(StocksOfBirge stocksOfBirge) {
+        if (StocksOfBirge.getPrice() == Price.Low)
             System.out.println(getName() + " не хотел покупать акции");
-        if (Stocks.getPrice() == Price.Normal)
+        if (StocksOfBirge.getPrice() == Price.Normal)
             System.out.println(getName() + " не остался в минусе");
 
     }

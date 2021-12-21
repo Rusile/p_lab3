@@ -1,8 +1,6 @@
 package place;
 
 
-import java.util.Objects;
-
 public enum Place {
     Barge(" на давилонской барже"),
     GadkinzNewspaper(" в своих газетах"),
@@ -24,4 +22,5 @@ public enum Place {
     public String toString() {
         return getClass().getName() + "[place:" + name + "]";
     }
+
 }

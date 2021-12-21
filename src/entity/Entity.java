@@ -37,4 +37,23 @@ public abstract class Entity {
     public String toString() {
         return getClass().getName() + "[name: " + getName() + "]";
     }
+
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+
+
+    @Override
+    public boolean equals(Object anotherObject) {
+        if (this == anotherObject) return true;
+        if (anotherObject == null) return false;
+        if (getClass() != anotherObject.getClass()) return false;
+        Entity another = (Entity) anotherObject;
+        return name.equals(another.name) && place.equals(another.place);
+    }
+
+
 }

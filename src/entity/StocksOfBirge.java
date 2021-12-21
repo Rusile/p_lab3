@@ -5,11 +5,11 @@ import place.Place;
 import ect.Price;
 
 //  акции
-public class Stocks extends Entity {
+public class StocksOfBirge extends Entity {
 
     private static Price price = Price.Normal;
 
-    public Stocks(String name, Place place) {
+    public StocksOfBirge(String name, Place place) {
         super(name, place);
     }
 
@@ -22,7 +22,7 @@ public class Stocks extends Entity {
     }
 
     public static void setPrice(Price price) {
-        Stocks.price = price;
+        StocksOfBirge.price = price;
     }
 
 
